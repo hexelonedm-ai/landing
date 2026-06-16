@@ -100,11 +100,30 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
         const existingLeads = JSON.parse(localStorage.getItem("hexel_leads_list") || "[]");
 
         // Google Sheet Live Sync Append check
+        const webhookUrl = localStorage.getItem("google_sheets_webhook_url") || "https://script.google.com/macros/s/AKfycbzhadONgJ0RLwyjZW5fJAL7iKgXvgA0goO0VjO-Zschzk7hNNuFwT_g2SNWvaFBWitmIw/exec";
         const spreadsheetId = localStorage.getItem("google_spreadsheet_id");
         const token = localStorage.getItem("google_sheets_token");
         const tokenExpiry = Number(localStorage.getItem("google_sheets_token_expiry") || "0");
 
-        if (spreadsheetId && token && Date.now() < tokenExpiry) {
+        if (webhookUrl) {
+          // Direct Webhook Sync (Safe from Auth Domain issues, CORS-safe with no-cors or basic POST)
+          fetch(webhookUrl, {
+            method: "POST",
+            mode: "no-cors", // guaranteed to bypass any cross-origin restrictions of Google Apps Script redirections
+            headers: {
+              "Content-Type": "text/plain",
+            },
+            body: JSON.stringify(leadRecord)
+          }).then(() => {
+            leadRecord.synced = true;
+            existingLeads.push(leadRecord);
+            localStorage.setItem("hexel_leads_list", JSON.stringify(existingLeads));
+          }).catch(err => {
+            console.error("Direct webhook submission failed:", err);
+            existingLeads.push(leadRecord);
+            localStorage.setItem("hexel_leads_list", JSON.stringify(existingLeads));
+          });
+        } else if (spreadsheetId && token && Date.now() < tokenExpiry) {
           appendLeadRow(token, spreadsheetId, [
             timestamp,
             formData.name,

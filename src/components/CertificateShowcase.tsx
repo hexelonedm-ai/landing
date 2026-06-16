@@ -25,7 +25,7 @@ export default function CertificateShowcase() {
 
   const handleShare = () => {
     setIsCopied(true);
-    navigator.clipboard.writeText("https://hexel-one.com/bootcamp-certification");
+    navigator.clipboard.writeText("https://hexel1.in/bootcamp-certification");
     setTimeout(() => setIsCopied(false), 2000);
   };
 
