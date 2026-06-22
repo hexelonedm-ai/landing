@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Hero from "./components/Hero";
 import PainPoints from "./components/PainPoints";
 import Transformation from "./components/Transformation";
+import WhoIsThisFor from "./components/WhoIsThisFor";
+import AIToolsMarquee from "./components/AIToolsMarquee";
 import Curriculum from "./components/Curriculum";
 import CertificateShowcase from "./components/CertificateShowcase";
 import BonusStack from "./components/BonusStack";
@@ -46,7 +48,7 @@ export default function App() {
       {/* Dynamic Header Announcement Bar */}
       <div className="bg-zinc-950 text-white text-xs text-center py-2.5 px-4 font-mono font-medium border-b border-zinc-900 flex flex-wrap justify-center items-center gap-x-4 gap-y-1 z-50 relative">
         <span className="flex items-center gap-1.5 text-rose-400">
-          <Flame className="w-3.5 h-3.5 animate-pulse" /> NEXT BATCH: MON, JUNE 15, 2026
+          <Flame className="w-3.5 h-3.5 animate-pulse" /> NEXT BATCH: ENROLLMENT OPEN NOW
         </span>
         <span className="h-3 w-px bg-zinc-800 hidden sm:inline"></span>
         <span>Only 3 Seats Remaining at ₹8,000 Special Offer</span>
@@ -116,6 +118,9 @@ export default function App() {
         {/* 1. Hero Section */}
         <Hero onOpenCheckout={handleOpenCheckout} />
 
+        {/* AI Tools Infinite Marquee */}
+        <AIToolsMarquee />
+
         {/* 2. Interactive ROI / Spend Calculator Widget */}
         <section className="py-12 bg-white relative -mt-8 sm:-mt-14 z-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
@@ -128,6 +133,9 @@ export default function App() {
 
         {/* 4. Course Transformation comparisons */}
         <Transformation />
+
+        {/* Who Is This Program For */}
+        <WhoIsThisFor />
 
         {/* 5. Course Syllabus / Module curriculum details */}
         <Curriculum />
@@ -180,7 +188,7 @@ export default function App() {
             </div>
 
             <p className="text-xs text-zinc-500 font-mono uppercase tracking-widest pt-4">
-              Batch starts Monday, June 15 at 7:00 PM IST  •  25 Students Cap
+              Batch filling fast  •  25 Students Cap
             </p>
           </div>
         </section>

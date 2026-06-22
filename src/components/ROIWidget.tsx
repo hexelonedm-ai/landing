@@ -145,7 +145,7 @@ export default function ROIWidget({ onOpenCheckout }: { onOpenCheckout: () => vo
               +{pureProfitGain} Extra Customers <span className="text-xs font-light text-zinc-400">/ month</span>
             </div>
             <p className="text-xs text-zinc-400">
-              Recover your ₹8,000 bootcamp learning investment in just days.
+              Recover your ₹4,999 masterclass investment in just days.
             </p>
           </div>
           <motion.button

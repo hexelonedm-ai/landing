@@ -116,7 +116,7 @@ export default function FAQ() {
             </div>
             <div>
               <h4 className="font-display font-bold text-sm text-zinc-900">Still have custom queries?</h4>
-              <p className="text-zinc-500 text-xs">Reach out to us at hexelone.dm@gmail.com or call +91 96006 06570</p>
+              <p className="text-zinc-500 text-xs">📞 Call / WhatsApp: +91 9600 60 65 70 | 🌐 Website: www.hexel1.in</p>
             </div>
           </div>
           <button 

@@ -167,10 +167,11 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 bg-[#e21b22] rounded-full inline-block animate-pulse"></span>
               <span className="font-display font-extrabold text-sm sm:text-base text-zinc-950">
-                {step === "success" ? "Seat Pre-Reserved!" : "Reserve Your Seat Now"}
+                {step === "success" ? "Enrollment Completed!" : "Enroll in the Masterclass"}
               </span>
             </div>
             <button 
+              onClose={onClose}
               onClick={onClose}
               className="p-1.5 hover:bg-zinc-100 rounded-full text-zinc-400 hover:text-zinc-700 transition-colors"
             >
@@ -185,11 +186,11 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
                 
                 <div className="bg-zinc-50 border border-zinc-200 rounded-2xl p-4 text-xs text-zinc-700 leading-relaxed space-y-1">
                   <span className="font-bold text-[#e21b22] uppercase font-mono block tracking-wide">
-                     BATCH PRE-REGISTRATION OPEN
+                     SPECIAL OFFER ENROLLMENT OPEN
                   </span>
-                  <p>✔ Access 7-Day Live Meta Ads Training</p>
-                  <p>✔ Get All 6 Exclusive Bonuses (worth ₹25,000+)</p>
-                  <p>✔ Priority entry credentials sent directly over WhatsApp</p>
+                  <p>✔ Access 7-Day Live Meta Ads Masterclass</p>
+                  <p>✔ Get All Premium Bonuses (worth ₹10,000+)</p>
+                  <p>✔ Entry credentials & schedule sent directly over WhatsApp</p>
                 </div>
 
                 {/* Form Fields */}
@@ -248,9 +249,10 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
                         onChange={(e) => setFormData({ ...formData, profile: e.target.value })}
                         className="w-full px-4 py-2.5 bg-zinc-50 border border-zinc-200 rounded-xl text-zinc-800 focus:outline-none focus:ring-2 focus:ring-rose-500 text-sm transition-all cursor-pointer"
                       >
+                        <option value="business">Business Owner</option>
                         <option value="student">Student</option>
-                        <option value="working">Working Professional</option>
-                        <option value="looking">Looking for a Job</option>
+                        <option value="freelancer">Freelancer</option>
+                        <option value="housewife">Housewife</option>
                       </select>
                     </div>
 
@@ -260,7 +262,7 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
                       </label>
                       <input
                         type="text"
-                        placeholder="e.g. Delhi, Chennai"
+                        placeholder="e.g. Mumbai, Chennai"
                         value={formData.city}
                         onChange={(e) => setFormData({ ...formData, city: e.target.value })}
                         className="w-full px-4 py-2.5 bg-zinc-50 border border-zinc-200 rounded-xl text-zinc-800 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-rose-500 text-sm transition-all"
@@ -272,7 +274,7 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
 
                 <div className="flex items-center gap-2 py-2 text-[10px] text-zinc-500 border-t border-zinc-100 mt-4">
                   <ShieldCheck className="w-4 h-4 text-emerald-500 shrink-0" />
-                  <span>We value your privacy. Your information is purely secured for bootcamp entry admissions.</span>
+                  <span>We value your privacy. Your information is secure and managed.</span>
                 </div>
 
                 <motion.button
@@ -280,7 +282,7 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
                   type="submit"
                   className="w-full bg-[#e21b22] text-white font-bold text-sm sm:text-base px-6 py-3.5 rounded-xl hover:bg-neutral-900 transition-colors flex items-center justify-center gap-2 shadow-lg cursor-pointer mt-2"
                 >
-                  Reserve My Seat Now <ArrowRight className="w-5 h-5" />
+                  Enroll Today for ₹4,999 <ArrowRight className="w-5 h-5" />
                 </motion.button>
               </form>
             )}
@@ -293,7 +295,7 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
                   <Sparkles className="w-6 h-6 text-[#e21b22] absolute inset-0 m-auto animate-pulse" />
                 </div>
                 <div className="space-y-1">
-                  <h3 className="font-display font-bold text-lg text-zinc-900">Processing Registration</h3>
+                  <h3 className="font-display font-bold text-lg text-zinc-900">Processing Enrollment</h3>
                   <p className="text-sm text-zinc-500 font-mono italic max-w-xs">{loadingText}</p>
                 </div>
               </div>
@@ -308,9 +310,9 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
                 </div>
 
                 <div className="space-y-2">
-                  <h3 className="text-2xl font-display font-black text-[#e21b22]">Seat Reserved, {formData.name}!</h3>
+                  <h3 className="text-2xl font-display font-black text-[#e21b22]">Seat Confirmed, {formData.name}!</h3>
                   <p className="text-sm text-zinc-600">
-                    Your spot is registered! We have processed your priority admission pass. Here is your temporary reservation pass code:
+                    Your spot is successfully saved! Here is your entry passcode:
                   </p>
                 </div>
 
@@ -318,8 +320,8 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
                 <div className="bg-zinc-950 text-white rounded-2xl p-5 w-full text-left font-mono text-xs border border-zinc-900 relative shadow-lg">
                   <div className="absolute top-0 right-4 h-3 bg-[#e21b22] w-12 rounded-b"></div>
                   <div className="flex justify-between items-center border-b border-zinc-800 pb-2.5 mb-2.5">
-                    <span className="font-semibold text-rose-400 text-[10px]">BOOTCAMP VIP PASS</span>
-                    <span className="font-bold text-white bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded px-1.5 py-0.5 text-[10px]">RESERVED</span>
+                    <span className="font-semibold text-rose-400 text-[10px]">MASTERCLASS ENTRY PASS</span>
+                    <span className="font-bold text-white bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded px-1.5 py-0.5 text-[10px]">CONFIRMED</span>
                   </div>
 
                   <div className="space-y-2.5 text-zinc-300">
@@ -333,8 +335,8 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
                         <span className="text-emerald-400 font-bold block">{passportNo}</span>
                       </div>
                       <div>
-                        <span className="text-[9px] text-zinc-500 block">BATCH DATE:</span>
-                        <span className="text-white font-bold block">Monday, Jun 15</span>
+                        <span className="text-[9px] text-zinc-500 block">TIMING:</span>
+                        <span className="text-white font-bold block">Starting Soon</span>
                       </div>
                     </div>
                     <div className="grid grid-cols-2 gap-2">
@@ -353,8 +355,8 @@ export default function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
                 {/* Instructions */}
                 <div className="bg-zinc-50 border border-zinc-200 rounded-xl p-4 text-xs text-zinc-650 leading-relaxed text-left space-y-1.5 w-full">
                   <span className="font-bold text-zinc-900 block font-display">What happens next?</span>
-                  <p>📱 A verified admission coordinator will contact you on <strong>{formData.whatsapp}</strong> shortly.</p>
-                  <p>🎁 Your 6 Exclusive Bonuses Worth ₹25,000+ will be dispatched over WhatsApp / Email once verified.</p>
+                  <p>📱 A coordinator will reach you on <strong>{formData.whatsapp}</strong> shortly with schedule and guidelines.</p>
+                  <p>🎁 Your premiums and bonuses of worth ₹10,000+ will be distributed systematically once details are verified.</p>
                 </div>
 
                 <div className="w-full">

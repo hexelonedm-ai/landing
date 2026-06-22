@@ -8,101 +8,103 @@ export default function Curriculum() {
   const modules = [
     {
       day: 1,
-      title: "Meta Ads Fundamentals & Mindset",
+      title: "AI-Powered Creative Creation",
       subtitle: "Day 1 Agenda",
-      icon: <BookOpen className="w-5 h-5 text-rose-500" />,
-      tagline: "Build a strong foundation and understand how the pixel ecosystem really works.",
+      icon: <Sparkles className="w-5 h-5 text-rose-500" />,
+      tagline: "Learn to produce high-converting ad creative scripts and assets in seconds using AI engines.",
       bullets: [
-        "How Meta's auction algorithm works in 2026",
-        "Setting up your Business Suite safely without ban risks",
-        "Understanding campaign objectives: Awareness vs. Leads vs. Sales",
-        "How to audit your business model for Meta ads viability"
+        "Ad Copy Creation",
+        "Text-to-Image Generation",
+        "Text-to-Video Creation",
+        "Reel Script Writing"
       ],
-      deliverable: "Personal Business Suite setup guide & Ads safety Checklist"
+      deliverable: "AI copy generator framework + 10x Hooks Swipe File"
     },
     {
       day: 2,
-      title: "Campaign Setup & Accounts Structure",
+      title: "Meta Ecosystem Setup",
       subtitle: "Day 2 Agenda",
       icon: <Settings className="w-5 h-5 text-rose-500" />,
-      tagline: "Structure campaigns from draft to launch like high-performing media buyers.",
+      tagline: "Avoid restricted accounts. Setup your business assets securely inside Meta Business Suite.",
       bullets: [
-        "The Hexel One CBO vs. ABO launch framework",
-        "Writing your first high-converting ad copies (using AI Hook Generator)",
-        "Creating custom graphics and video hooks for Meta’s formats",
-        "Setting up the Meta Pixel & Conversions API correctly"
+        "Facebook Page Setup",
+        "Ad Account Setup",
+        "Instagram Integration",
+        "WhatsApp Integration"
       ],
-      deliverable: "High-CTR Creative Brief Template + Hook script checklist"
+      deliverable: "Meta Ecosystem Integration checklist & restriction preventer map"
     },
     {
       day: 3,
-      title: "Audience Targeting Mastery",
+      title: "Launch Your First Ads",
       subtitle: "Day 3 Agenda",
-      icon: <Target className="w-5 h-5 text-rose-500" />,
-      tagline: "Find exactly who is ready to buy your product, coffee or service.",
+      icon: <BookOpen className="w-5 h-5 text-rose-500" />,
+      tagline: "Build a structured model inside Ads Manager from draft to published campaign.",
       bullets: [
-        "The 'Detailed Expansion' myth and what actually works",
-        "Laser-targeting service buyers vs. high-ticket investors",
-        "Building Lookalikes (LAL) and Custom Audiences from existing lists",
-        "Excluding existing customers to maximize your budget efficiency"
+        "Campaign Objectives",
+        "Audience Research",
+        "Interest Targeting",
+        "Budget Allocation"
       ],
-      deliverable: "Custom Audience Targeting Map (Pre-configured for 12 niches)"
+      deliverable: "Campaign Budget Optimization (CBO) template & targeting worksheet"
     },
     {
       day: 4,
-      title: "Engagement Campaign Strategies",
+      title: "Generate Calls & Leads",
       subtitle: "Day 4 Agenda",
-      icon: <Sparkles className="w-5 h-5 text-rose-500" />,
-      tagline: "Build trust and brand authority in your local operating region.",
+      icon: <Users className="w-5 h-5 text-rose-500" />,
+      tagline: "Construct call funnels and lead forms that screen out tire-kickers and low-intent clicks.",
       bullets: [
-        "Warm-up ad structures to drive low-cost video views",
-        "Generating social proof: likes, shares, and high value comments",
-        "How to turn engagement into custom retargeting stacks",
-        "Local business geographical pin-drop targeting strategies"
+        "Call Campaigns",
+        "Instant Forms",
+        "Lead Qualification",
+        "Follow-Up Strategy"
       ],
-      deliverable: "Social Proof Multiplier Blueprint"
+      deliverable: "Pre-qualified Lead Forms Swipe File"
     },
     {
       day: 5,
-      title: "Lead Generation Systems",
+      title: "Track Performance & Scale",
       subtitle: "Day 5 Agenda",
-      icon: <Users className="w-5 h-5 text-rose-500" />,
-      tagline: "Setup Instant Lead Forms that screen out spam registrations automatically.",
+      icon: <Zap className="w-5 h-5 text-rose-500" />,
+      tagline: "Master scaling budgets safely without degrading your lead quality or ROI.",
       bullets: [
-        "Designing Instant Forms that get high intent details",
-        "Pre-qualifying questions framework (Stop calling fake/unreachable leads)",
-        "Integrating forms to Google Sheets or CRMs in 3 steps",
-        "Privacy policy requirements and basic regulatory setup"
+        "ROAS Optimization",
+        "Industry Benchmarks",
+        "Campaign Optimization",
+        "Scaling Strategies"
       ],
-      deliverable: "Pre-qualified Lead Form Templates"
+      deliverable: "Standard Performance KPIs sheet & Auto-scaling rulebook"
     },
     {
       day: 6,
-      title: "Optimization & Scaling Rules",
+      title: "Meta Pixel & Retargeting",
       subtitle: "Day 6 Agenda",
-      icon: <Zap className="w-5 h-5 text-rose-500" />,
-      tagline: "Analyze metrics and double your budget without ruining performance.",
+      icon: <Target className="w-5 h-5 text-rose-500" />,
+      tagline: "Generate lookalikes and customized custom audiences to target active buyers.",
       bullets: [
-        "The master KPIs: Understanding CTR, CPC, CPL, and ROAS metrics",
-        "Rules to scale budget from ₹500/day to ₹10,000/day",
-        "How to combat ad fatigue with creative rotation cycles",
-        "When to kill a poor campaign vs. when to expand it"
+        "Meta Pixel Setup",
+        "Event Tracking",
+        "Conversion Tracking",
+        "Custom Audiences",
+        "Lookalike Audiences",
+        "Retargeting Campaigns"
       ],
-      deliverable: "The Hexel Scaling Decision Rulebook SHEET"
+      deliverable: "Conversion tracking event guide & active retargeting blueprints"
     },
     {
       day: 7,
-      title: "WhatsApp Automation & Funnels",
+      title: "Funnels & Real-Time Optimization",
       subtitle: "Day 7 Agenda",
       icon: <MessageSquare className="w-5 h-5 text-rose-500" />,
-      tagline: "Close buyers instantly using automated auto-responses.",
+      tagline: "Integrate high-converting lead/sales landing pages for real-time customer acquisition.",
       bullets: [
-        "Bridging Meta Ads directly inside the WhatsApp app",
-        "Structuring automated scripts for instant qualification",
-        "Creating follow-up drip templates that run 24/7 on autopilot",
-        "The Day-7 Live Final Campaign Launch Ceremony"
+        "Lead Funnels",
+        "Sales Funnels",
+        "Landing Pages",
+        "Conversion Optimization"
       ],
-      deliverable: "Plug-and-play WhatsApp Chatbot Automation Scripts"
+      deliverable: "Plug-and-play landing page frame + live deployment funnel setup"
     }
   ];
 

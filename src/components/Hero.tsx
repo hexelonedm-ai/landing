@@ -33,33 +33,36 @@ export default function Hero({ onOpenCheckout }: { onOpenCheckout: () => void })
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Main Hero Copy - Left 7 Cols */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-            <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-display font-extrabold tracking-tight leading-tight mt-4">
-              Master Meta Ads & <br className="hidden sm:inline" />
-              <span className="text-[#e21b22] bg-clip-text">AI Marketing</span> in 7 Days
+            <h1 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-display font-extrabold tracking-tight leading-tight mt-4">
+              AI Powered <br className="hidden sm:inline" />
+              <span className="text-[#e21b22] bg-clip-text">Meta Ads Masterclass</span>
             </h1>
 
-            <p className="text-zinc-300 text-lg sm:text-xl font-sans max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Stop boosting posts blindly. Gain the ultimate framework to generate high-quality leads, automate WhatsApp responses, and scale your business consistently.
+            <h2 className="text-xl sm:text-2xl font-bold text-zinc-100 font-sans tracking-wide">
+              Generate More Leads, Sales & Customers Using AI + Meta Ads
+            </h2>
+
+            <p className="text-zinc-300 text-base sm:text-lg font-sans max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              🚀 Learn how to create high-converting ad creatives, launch profitable Meta Ads campaigns, generate qualified leads, and build automated sales funnels using the latest AI tools.
             </p>
 
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 max-w-xl mx-auto lg:mx-0 text-left pt-2">
-              <li className="flex items-start gap-2.5 text-zinc-300 text-sm">
-                <CheckCircle className="w-5 h-5 text-rose-500 shrink-0 mt-0.5" />
-                <span><strong>No prior experience needed:</strong> We teach you directly from the absolute ground up.</span>
-              </li>
-              <li className="flex items-start gap-2.5 text-zinc-300 text-sm">
-                <CheckCircle className="w-5 h-5 text-rose-500 shrink-0 mt-0.5" />
-                <span><strong>Learn with live campaigns:</strong> Build and launch real campaigns alongside the tutor.</span>
-              </li>
-              <li className="flex items-start gap-2.5 text-zinc-300 text-sm">
-                <CheckCircle className="w-5 h-5 text-rose-500 shrink-0 mt-0.5" />
-                <span><strong>AI-powered copy frameworks:</strong> Produce 30+ high-CTR ad hooks in seconds.</span>
-              </li>
-              <li className="flex items-start gap-2.5 text-zinc-300 text-sm">
-                <CheckCircle className="w-5 h-5 text-rose-500 shrink-0 mt-0.5" />
-                <span><strong>WhatsApp instant funnel:</strong> Reach. Respond. Capture leads pre-vetted 24/7.</span>
-              </li>
-            </ul>
+            <div className="bg-zinc-900/60 border border-zinc-800 p-4 rounded-xl max-w-xl mx-auto lg:mx-0 text-left space-y-2">
+              <p className="text-xs font-mono text-zinc-400 uppercase tracking-widest font-black">7 Days Live Online Program</p>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-zinc-300 text-sm">
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-[#e21b22] shrink-0" />
+                  <span>Interactive Sessions</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-[#e21b22] shrink-0" />
+                  <span>Tamil & English support</span>
+                </li>
+                <li className="flex items-center gap-2 col-span-1 sm:col-span-2">
+                  <CheckCircle className="w-4 h-4 text-[#e21b22] shrink-0" />
+                  <span>Practical Training with Real Business Campaigns</span>
+                </li>
+              </ul>
+            </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
               <motion.button
@@ -68,16 +71,14 @@ export default function Hero({ onOpenCheckout }: { onOpenCheckout: () => void })
                 onClick={onOpenCheckout}
                 className="w-full sm:w-auto bg-[#e21b22] text-white font-bold text-base px-8 py-4 rounded-xl hover:bg-neutral-100 hover:text-black transition-colors shadow-xl shadow-rose-900/20 flex items-center justify-center gap-3 group relative cursor-pointer"
               >
-                Reserve My Seat For ₹8,000
+                Enroll Today for ₹4,999
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </motion.button>
               
-              <a 
-                href="#roi-calculator" 
-                className="text-zinc-400 hover:text-white text-sm font-semibold transition-colors flex items-center gap-1.5 py-2.5"
-              >
-                Or Predict Your ROI First 👇
-              </a>
+              <div className="text-zinc-400 text-xs text-left">
+                <span className="line-through block sm:inline mr-2 text-zinc-500 text-sm">Regular Price: ₹8,000</span>
+                <span className="text-emerald-400 font-bold font-mono">Save 37% Today!</span>
+              </div>
             </div>
 
             {/* Social Proof Badges */}
@@ -156,7 +157,7 @@ export default function Hero({ onOpenCheckout }: { onOpenCheckout: () => void })
                   </div>
                   <div className="flex justify-between items-center text-[10px] text-rose-300 pt-1">
                     <span>Only 3 Seats Remaining!</span>
-                    <span>Starts Mon, June 15</span>
+                    <span>Starting Soon</span>
                   </div>
                 </div>
               </div>

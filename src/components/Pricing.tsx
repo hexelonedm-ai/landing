@@ -28,13 +28,12 @@ export default function Pricing({ onOpenCheckout }: { onOpenCheckout: () => void
   }, []);
 
   const stackElements = [
-    { name: "7-Day Live Meta Ads Mastery Workshop", value: "₹15,000", free: false },
-    { name: "Bonus 1: 50+ AI Ad Copy Prompts", value: "₹4,999", free: true },
-    { name: "Bonus 2: Campaign Setup Blueprint", value: "₹3,999", free: true },
-    { name: "Bonus 3: WhatsApp Automation Chatbot Setup", value: "₹5,999", free: true },
-    { name: "Bonus 4: Target Audience Matrix", value: "₹2,999", free: true },
-    { name: "Bonus 5: Life-time Student Elite Group", value: "₹7,999", free: true },
-    { name: "Bonus 6: Verified Hexel Course Certificate", value: "₹1,500", free: true }
+    { name: "7-Day Live Meta Ads Masterclass", value: "₹8,000", free: false },
+    { name: "Bonus 1: Certificate of Completion", value: "₹1,500", free: true },
+    { name: "Bonus 2: Exclusive WhatsApp Community Access", value: "₹2,500", free: true },
+    { name: "Bonus 3: 50+ AI Prompts for Content Creation", value: "₹3,000", free: true },
+    { name: "Bonus 4: Lifetime Access to Session Recordings", value: "₹2,999", free: true },
+    { name: "Bonus 5: PPTs, Notes & Learning Resources", value: "₹1,999", free: true }
   ];
 
   return (
@@ -84,7 +83,7 @@ export default function Pricing({ onOpenCheckout }: { onOpenCheckout: () => void
 
             <div className="pt-8 border-t border-zinc-800 mt-6 flex justify-between items-baseline flex-wrap gap-2">
               <span className="text-zinc-400 text-sm uppercase tracking-wider font-semibold">Total Cumulative Value:</span>
-              <span className="text-zinc-500 text-lg line-through font-mono">₹41,495</span>
+              <span className="text-zinc-500 text-lg line-through font-mono">₹19,498</span>
             </div>
           </div>
 
@@ -96,21 +95,21 @@ export default function Pricing({ onOpenCheckout }: { onOpenCheckout: () => void
             <div className="space-y-6">
               <div className="space-y-2">
                 <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded bg-rose-50 border border-rose-100 text-[#e21b22] text-[10px] font-mono font-bold uppercase">
-                  <Flame className="w-3.5 h-3.5 animate-pulse" /> ONLY 3 SEATS LEFT
+                  <Flame className="w-3.5 h-3.5 animate-pulse" /> LIMITED SEATS AVAILABLE
                 </span>
-                <h3 className="text-2xl font-display font-black text-zinc-900">Hexel One Meta Ads Bootcamp</h3>
-                <p className="text-xs text-zinc-400">Everything you need to launch profits in 7 days</p>
+                <h3 className="text-2xl font-display font-black text-zinc-900">AI Powered Meta Ads Masterclass</h3>
+                <p className="text-xs text-zinc-400">Everything you need to master traffic & lead sales in 7 days</p>
               </div>
 
               {/* Price Tag */}
-              <div className="py-4 border-y border-zinc-100 space-y-1">
+              <div className="py-4 border-y border-zinc-100 space-y-1 animate-pulse">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-zinc-400 text-sm line-through font-mono">₹15,000</span>
-                  <span className="text-4xl font-display font-extrabold text-[#e21b22]">FREE</span>
-                  <span className="text-xs text-zinc-500 font-medium">Pre-Register Now</span>
+                  <span className="text-zinc-400 text-sm line-through font-mono">₹8,000</span>
+                  <span className="text-4xl font-display font-extrabold text-[#e21b22]">₹4,999</span>
+                  <span className="text-xs text-emerald-600 font-bold bg-emerald-50 px-1.5 py-0.5 rounded">Special Offer</span>
                 </div>
                 <p className="text-[11px] text-zinc-500 leading-relaxed">
-                  Lock in your batch pre-registration. No payment card required for now. Our team will verify eligibility on WhatsApp.
+                  Lock in your special masterclass enrollment rate today. Register below to claim your seats and bonuses instantly. 
                 </p>
               </div>
 
@@ -146,12 +145,12 @@ export default function Pricing({ onOpenCheckout }: { onOpenCheckout: () => void
                 onClick={onOpenCheckout}
                 className="w-full bg-[#e21b22] text-white font-bold text-base px-6 py-4 rounded-xl hover:bg-neutral-900 hover:text-white transition-colors flex items-center justify-center gap-2 shadow-lg shadow-rose-200 cursor-pointer"
               >
-                Reserve Seat Now (Free) <ArrowRight className="w-4.5 h-4.5" />
+                Enroll Now for ₹4,999 <ArrowRight className="w-4.5 h-4.5" />
               </motion.button>
 
               <div className="flex items-center justify-center gap-2 text-xs text-zinc-400 font-semibold">
                 <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>100% Free Seat Hold Reservation</span>
+                <span>100% Risk Free Verification</span>
               </div>
             </div>
           </div>
@@ -162,7 +161,7 @@ export default function Pricing({ onOpenCheckout }: { onOpenCheckout: () => void
         <div className="max-w-4xl mx-auto bg-zinc-900/30 border border-zinc-800/50 p-6 rounded-2xl flex flex-col sm:flex-row items-center gap-4 mt-16 text-center sm:text-left justify-between">
           <div className="space-y-1">
             <h4 className="text-white font-bold font-display text-sm">Need corporate custom quotes?</h4>
-            <p className="text-zinc-400 text-xs">Email us at hexelone.dm@gmail.com or call +91 96006 06570</p>
+            <p className="text-zinc-400 text-xs">📞 Call / WhatsApp: +91 9600 60 65 70 | 🌐 Website: www.hexel1.in</p>
           </div>
           <a href="mailto:hexelone.dm@gmail.com" className="text-rose-400 hover:text-rose-300 text-xs font-bold font-mono uppercase bg-rose-500/5 px-4 py-2 rounded-lg border border-rose-500/20">
             CONTACT TEAM
